@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>Формы HTML5</title>
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <section id="form">
+  <div class="A">
+  <h1>Заказ билетов на соревнования по биатлону</h1>
+  <h3>Биатлонный стадион "Жемчужина Сибири"</h3>
+    <form name="myform" id="myform" method="get">
+	<table>
+      <tr><td>Ваше имя <span class="red">*</span> :</td>
+	  <td><input type="text" name="name" id="name"
+	  required placeholder="Ваше Имя"></td></tr>
+	  
+	  <tr><td>Ваш пароль <span class="red">*</span>  :</td>
+	  <td><input type="password" name="pass" id="pass" autocomplete="off"
+	  required placeholder="Ваш Пароль"
+	  pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"></td></tr>
+	  
+	  <tr><td>Ваш телефон <span class="red">*</span> :</td>
+	  <td><input type="tel" name="tel" id="tel"
+	  required placeholder="Ваш телефон" pattern="[0-9]{10}"></td></tr>
+	  
+	  <tr><td>Ваш E-mail :</td><td><input type="email" name="email" id="email"
+	  required placeholder="Ваш E-mail"></td></tr>
+	  
+	  <tr><td>Вид билета <span class="red">*</span>:</td>
+	  <td>
+	   <select name="v" id="v">
+	    <option>Трибуна А - 400 руб.</option>
+		<option>Трибуна B - 300 руб.</option>
+		<option>Трибуна C - 200 руб.</option>
+		<option>Трибуна D - 200 руб.</option>
+		<option selected>Трасса - 100 руб.</option>
+	  </select>
+	  </td></tr>
+	  
+	  <tr><td>Дата <span class="red">*</span>:</td><td><input type="date" name="date" id="date"
+	  required></td></tr>
+	  
+	  <tr><td>Количество билетов <span class="red">*</span>:</td>
+	  <td><input type="number" name="kol" id="kol" min="1"
+	  required placeholder="Количество билетов"></td></tr>
+	  
+	  
+	  <tr><td>&nbsp;</td><td>&nbsp;</td></tr> <!-- Пустая строка -->
+      <tr class="center"><td><input class="but" type="reset" value="Очистить"></td>
+	  <td><input class="but" type="submit" value="Заказать"></td></tr>
+	  <tr><td>&nbsp;</td><td>&nbsp;</td></tr> <!-- Пустая строка -->
+	  <tr><td colspan="2" class="red mini">Поля отмеченные * обязательны для заполнения</td></tr>
+	  </table>
+    </form>
+   </div>
+  </section>
+</body>
+</html>
